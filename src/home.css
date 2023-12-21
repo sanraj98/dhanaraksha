@@ -1,6 +1,17 @@
-.home-body{
+.home-body {
+    position: relative;
+    min-height: 70vh;
+}
 
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url("./home-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
 }
