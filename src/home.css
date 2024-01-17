@@ -15,3 +15,26 @@
     opacity: 0.4;
     z-index: -1;
 }
+
+.card{
+    position: relative;
+    background-image: url('./seats.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Add relative positioning for proper z-index use */
+    z-index: 0;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    /* Ensure the pseudo-element covers the entire card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Apply the black background with 0.5 opacity */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the z-index to position the overlay behind the card content */
+    z-index: -1;
+}
